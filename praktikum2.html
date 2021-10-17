@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Praktikum Dua</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+
+        body{
+            align-content: center;
+            background-color: rgb(152, 248, 255);
+        }
+        h2{
+            margin-top: 25px;
+            font-size: 60px;
+        }
+       
+       select{
+           width: 100%;
+       }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container-md" >
+        <h2 align="center">Registration Form</h2>
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input style="background-color:rgb(204, 197, 200); width: 100%;" type="text" placeholder="cuma nama panggilan"  pattern="[a-z]{1,15}" required>
+            </div>
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <input style="background-color:rgb(204, 197, 200); width: 100%;" type="text"   placeholder="enter address" required>
+            </div>
+            <div class="form-group">
+                <label for="code">Zip Code:</label>
+                <input style="background-color:rgb(204, 197, 200);width: 100%;" type="text"  placeholder="6 digit angka"  pattern="[0-9]{6}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input style="background-color:rgb(204, 197, 200);width: 100%;" type="email"  placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input style="background-color:rgb(204, 197, 200);width: 100%;" type="password"  placeholder="kombinasi minima 1 huruf dan angka" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </div>
+            <div class="form-group">
+                <label for="Telephone">Telephone:</label>
+                <input style="background-color:rgb(204, 197, 200);width: 100%;" type="Telephone"  placeholder="0896-1234-5674" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Your Course</label>
+                <br>
+                <select style="background-color:rgb(204, 197, 200);" style="width: 100%;" id="mySelect" >
+                    <option disabled="disabled"></option>
+                    <option>BTECH</option>
+                    <option>BBA</option>
+                    <option>BCA</option>
+                    <option>B.COM</option>
+                    <option>GEEKFORGEEKS</option>
+                </select>
+                <script>
+                    function myFunction() {
+                        var result = document.getElementById("mySelect").value;
+                        alert(result);
+                    }
+                </script>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <input type="submit" value="submit">
+            
+            <input type="reset" value="Reset">
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
